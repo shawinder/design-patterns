@@ -1,0 +1,7 @@
+//This pattern is used when there is one to many relationship between objects such as if one object is modified, its dependent objects are to be notified automatically.
+// {type:class}
+[note: Observer design pattern{bg:cornsilk}]
+[AbstractSubject|-observers:Observer|+Attach();+Detach();+Notify()]->[<<Interface>>;Observer|+Update()]
+[<<Interface>>;Observer|+Update()]^[ConcreteObserver|-subject:ConcreteSubject;+Update()]
+[ConcreteSubject|-state;+GetState()]<-[ConcreteObserver|-subject:ConcreteSubject;+Update()]
+[AbstractSubject|-observers:Observer|+Attach();Detach();Notify()]^[ConcreteSubject|-state;+GetState()]

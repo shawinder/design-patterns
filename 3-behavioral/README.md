@@ -1,0 +1,1 @@
+# These patterns deal with the process of communication, managing relationships, and responsibilities between objects.

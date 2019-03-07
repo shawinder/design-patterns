@@ -1,0 +1,8 @@
+
+//https://www.dotnettricks.com/learn/designpatterns/abstract-factory-design-pattern-dotnet
+//Abstract Factory creates an object through composition and produces family of products
+// {type:class}
+[<<Interface>> AbstractProduct]^[Concrete Product]
+[<<Interface>> AbstractFactory]^[Concrete Factory]
+[<<Interface>> AbstractFactory]<-[Client]
+[Client]->[<<Interface>> AbstractProduct]

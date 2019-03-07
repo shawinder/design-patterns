@@ -1,0 +1,8 @@
+//Provides a substitute object, which references to other object
+//Ex: Hiding complex logic while talking to real object
+//Ex: Providing Modified results
+// {type:class}
+// {direction:leftToRight}
+[<<interface>>;Subject|+PerformAction()]^[RealSubject|+PerformAction()]
+[<<interface>>;Subject|+PerformAction()]^[Proxy|-realSubject:RealSubject|+PerformAction()]
+[Proxy|-realSubject:RealSubject|+PerformAction()]->[RealSubject|+PerformAction()]

@@ -1,0 +1,1 @@
+# These patterns deal with the process of objects creation in such a way that they can be decoupled from their implementing system.

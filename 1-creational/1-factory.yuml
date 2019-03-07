@@ -1,0 +1,6 @@
+//https://www.dotnettricks.com/learn/designpatterns/factory-method-design-pattern-dotnet
+//Factory creates an object through inheritance and produces only 1 product
+// {type:class}
+[<<Interface>> Product]^[Concrete Product]
+[AbstractCreator]^[Concrete Creator]
+[Concrete Creator]-.->[Concrete Product]

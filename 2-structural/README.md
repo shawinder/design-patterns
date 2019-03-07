@@ -1,0 +1,1 @@
+# These patterns deal with the composition of objects structures.
