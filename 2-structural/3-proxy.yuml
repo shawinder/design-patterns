@@ -3,6 +3,7 @@
 //Ex: Providing Modified results
 // {type:class}
 // {direction:leftToRight}
+// {generate:true}
 [<<interface>>;Subject|+PerformAction()]^[RealSubject|+PerformAction()]
 [<<interface>>;Subject|+PerformAction()]^[Proxy|-realSubject:RealSubject|+PerformAction()]
 [Proxy|-realSubject:RealSubject|+PerformAction()]->[RealSubject|+PerformAction()]

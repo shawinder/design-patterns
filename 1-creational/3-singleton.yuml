@@ -1,2 +1,3 @@
 // {type:class}
+// {generate:true}
 [Singleton|-instance:Singleton|-Singleton();;+GetInstance():Singleton]

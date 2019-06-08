@@ -1,5 +1,6 @@
 //Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system.
 // {type:class}
+// {generate:true}
 [SubSystemA|+OperationA1();+OperationA2()]
 [SubSystemB|+OperationB1();+OperationB2()]
 [SubSystemC|+OperationC1();+OperationC2()]
