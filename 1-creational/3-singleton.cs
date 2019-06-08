@@ -1,7 +1,7 @@
 /// <summary>
 /// Eager initialization
 /// </summary>
-public class Singleton
+public sealed class Singleton
 {
     private static Singleton instance = new Singleton();
     private Singleton() { }
@@ -18,7 +18,7 @@ public class Singleton
 /// <summary>
 /// Lazy initialization
 /// </summary>
-public class Singleton
+public sealed class Singleton
 {
     private static Singleton instance = null;
     private Singleton() { }
@@ -38,7 +38,7 @@ public class Singleton
 /// <summary>
 /// Thread-safe (Double-checked Locking)
 /// </summary>
-public class Singleton
+public sealed class Singleton
 {
     private static Singleton instance = null;
     private Singleton() { }
@@ -55,6 +55,24 @@ public class Singleton
 
                 return instance;
             }
+        }
+    }
+}
+
+/// <summary>
+/// .NET 4 (or higher), you can use the System.Lazy<T> type to make the laziness really simple. 
+/// All you need to do is pass a delegate to the constructor which calls the Singleton constructor 
+/// Implicitly uses LazyThreadSafetyMode.ExecutionAndPublication as the thread safety mode
+/// </summary>
+public sealed class Singleton
+{
+    private Singleton() { }
+    private static readonly Lazy<Singleton> lazy = new Lazy<Singleton>(() => new Singleton());
+    public static Singleton Instance
+    {
+        get
+        {
+            return lazy.Value;
         }
     }
 }
